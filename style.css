@@ -98,7 +98,6 @@ nav ul li a:hover {
   nav ul li a {
     padding: 8px;
   }
-  /* ============================== */
 
   /* About Me Section */
   .about-content {
@@ -127,6 +126,7 @@ nav ul li a:hover {
     width: 100%;
   }
 }
+  /* ============================== */
 
 /* Memberikan margin antara setiap section */
 section {
