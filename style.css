@@ -1,0 +1,320 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/*======================= NAVBAR =======================*/
+
+nav {
+  width: 100%;
+  background-color: #222;
+  color: #fff;
+  padding: 10px 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+nav .brand {
+  color: #fff;
+  text-decoration: none;
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+nav .menu {
+  text-align: right;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #555;
+  border-radius: 5px;
+}
+
+/*======================= MAIN =======================*/
+
+/* ==== Fixing Responsive Design ==== */
+@media (max-width: 768px) {
+  nav {
+    padding: 20px 0;
+  }
+
+  nav .wrapper {
+    padding: 0 10px;
+  }
+
+  nav .brand {
+    margin-top: 0;
+  }
+
+  nav .menu {
+    float: none;
+    margin-top: 20px;
+  }
+
+  nav ul li {
+    display: block;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  nav ul li:last-child {
+    margin-bottom: 0;
+  }
+
+  nav ul li a {
+    padding: 8px;
+  }
+  /* ============================== */
+
+  /* About Me Section */
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-image {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  /* Interest Section */
+  .interest-items {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .interest-item {
+    width: 100%;
+  }
+
+  /* Certificate Section */
+  .certificate-items .certificate-item {
+    width: 100%;
+  }
+}
+
+/* Memberikan margin antara setiap section */
+section {
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
+
+main {
+  flex: 1;
+}
+
+/* ABOUT ME SECTION */
+
+#about-me {
+  background-color: #f9f9f9;
+  padding: 60px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-text {
+  max-width: 600px;
+  text-align: left;
+  flex: 1;
+}
+
+.about-image {
+  margin-top: 50px;
+  margin-left: 30px;
+}
+
+.about-image img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.about-image:hover img {
+  transform: scale(1.1);
+}
+
+/* EDUCATION IN ABOUT ME */
+
+.about-education {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.education-frame {
+  width: 45%;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.education-frame:hover {
+  transform: translateY(5px);
+}
+
+.education-frame h3 {
+  margin-bottom: 10px;
+}
+
+.education-frame img {
+  width: 80px;
+  border-radius: 50%;
+}
+
+.education-frame p {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* INTEREST AND SKILL SECTION */
+
+h2 {
+  padding: 20px;
+  text-align: center;
+}
+
+.interest-items {
+  display: flex;
+  justify-content: space-around;
+}
+
+.interest-item {
+  width: 45%;
+  margin: 10px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.interest-item:hover {
+  transform: translateY(-5px);
+}
+
+.icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.content h3 {
+  margin-bottom: 10px;
+  word-wrap: break-word;
+}
+
+.content p {
+  font-size: 14px;
+}
+
+/* CERTIFICATE SECTION */
+
+#certificates {
+  background-color: #f9f9f9;
+  padding: 50px 0;
+}
+
+.certificate-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.certificate-item {
+  margin: 20px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.certificate-item:hover img {
+  transform: scale(1.1);
+}
+
+.certificate-item img {
+  width: 250px;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px;
+  border-radius: 10px;
+}
+
+.certificate-info {
+  text-align: center;
+}
+
+.certificate-info h3 {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.certificate-info p {
+  font-size: 14px;
+}
+
+/*======================= FOOTER =======================*/
+
+.footer {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.social-icons a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 24px;
+}
